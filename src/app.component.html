@@ -1,0 +1,191 @@
+<div class="loader" [class.done]="loaded" [attr.aria-hidden]="loaded">
+  <div class="loader-top"><span>LIMITLESS / 2026</span><span>MARKETING SERVICES / CAIRO</span></div>
+  <div class="loader-brand"><img src="assets/limitless-logo-clean.webp" alt="" width="603" height="608"></div>
+  <div class="loader-word">THE FUTURE IS <b>LIMITLESS<span>.</span></b></div>
+  <div class="loader-line"><i></i></div>
+  <small>MARKETING / PEOPLE / MOTION</small>
+</div>
+
+<div class="progress" aria-hidden="true"><i [style.width.%]="scrollProgress"></i></div>
+
+<header class="nav" [class.scrolled]="scrollProgress > 3" [class.nav-hidden]="navHidden">
+  <a class="brand" href="#home" aria-label="Go to home" (click)="navigate($event, 'home')">
+    <span class="brand-mark"><img class="brand-logo" src="assets/limitless-logo-clean.webp" width="603" height="608" alt="Limitless Marketing Services" loading="eager" decoding="async"></span>
+    <span class="brand-copy"><strong>LIMITLESS</strong><small>MARKETING SERVICES</small></span>
+  </a>
+
+  <button type="button" class="menu" [class.open]="menuOpen" aria-label="Toggle menu" [attr.aria-expanded]="menuOpen" aria-controls="main-navigation" (click)="toggleMenu()">
+    <i></i><i></i>
+  </button>
+
+  <div class="mobile-backdrop" [class.show]="menuOpen" (click)="closeMenu()" aria-hidden="true"></div>
+
+  <div class="nav-status" aria-hidden="true"><i></i><span>CAIRO / 2026</span></div>
+
+  <nav id="main-navigation" [class.open]="menuOpen" aria-label="Main navigation">
+    <a href="#home" [class.active]="activeSection==='home'" [attr.aria-current]="activeSection==='home' ? 'page' : null" (click)="navigate($event, 'home')">Home</a>
+    <a href="#about" [class.active]="activeSection==='about'" [attr.aria-current]="activeSection==='about' ? 'location' : null" (click)="navigate($event, 'about')">About</a>
+    <a href="#services" [class.active]="activeSection==='services'" [attr.aria-current]="activeSection==='services' ? 'location' : null" (click)="navigate($event, 'services')">Services</a>
+    <a href="#clients" [class.active]="activeSection==='clients'" [attr.aria-current]="activeSection==='clients' ? 'location' : null" (click)="navigate($event, 'clients')">Clients</a>
+    <a href="#work" [class.active]="activeSection==='work'" [attr.aria-current]="activeSection==='work' ? 'location' : null" (click)="navigate($event, 'work')">Work</a>
+    <a href="#production" [class.active]="activeSection==='production'" [attr.aria-current]="activeSection==='production' ? 'location' : null" (click)="navigate($event, 'production')">Production</a>
+    <a href="#contact" [class.active]="activeSection==='contact'" [attr.aria-current]="activeSection==='contact' ? 'location' : null" (click)="navigate($event, 'contact')">Contact</a>
+    <a class="nav-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Aymanpm99%40gmail.com&amp;su=Limitless%20Project%20Inquiry&amp;body=Hello%20Limitless%20Marketing%20Services%2C%0A%0AI%27d%20like%20to%20discuss%20a%20new%20project.%0A%0AProject%20details%3A%0A%0ABest%20regards%2C" target="_blank" rel="noopener noreferrer">Start a project <span>↗</span></a>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero" (pointermove)="onHeroPointerMove($event)" (pointerleave)="resetHeroPointer()">
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-orb orb-a"></div>
+    <div class="hero-orb orb-b"></div>
+
+    <div class="hero-top"><span>CAIRO / EGYPT</span><span>PEOPLE-TO-PEOPLE AGENCY</span><span>01—06</span></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker"><b></b>20+ YEARS OF HUMAN-CENTRIC MARKETING</p>
+      <h1 class="hero-title"><span class="line">The future is</span><span class="line"><em>limitless.</em></span></h1>
+      <div class="hero-bottom">
+        <div class="hero-note" aria-hidden="true"><span>DIRECT / DIGITAL / LIVE</span><i></i></div>
+        <p>Real people. Real connections. Real-world activation, production and direct marketing built around measurable impact.</p>
+        <button type="button" class="circle-cta" (click)="scrollTo('work')" aria-label="Explore selected work"><span>Explore<br>our work</span><b>↘</b></button>
+      </div>
+    </div>
+
+    <div class="hero-meta" aria-hidden="true"><span>MARKETING</span><span>PEOPLE</span><span>MOTION</span><span>RESULTS</span></div>
+
+    <aside class="hero-panel" aria-label="Limitless highlights">
+      <div class="hero-panel-head"><span>LIMITLESS / PROFILE</span><b>01—03</b></div>
+      <div class="hero-panel-main"><strong>20+</strong><span>years of experience</span></div>
+      <div class="hero-panel-grid">
+        <div><b>EGY</b><span>CAIRO BASED</span></div>
+        <div><b>B2B</b><span>AND B2C</span></div>
+        <div><b>360°</b><span>ACTIVATION</span></div>
+      </div>
+    </aside>
+
+    <div class="hero-scroll">SCROLL TO EXPLORE <i></i></div>
+  </section>
+
+  <div class="marquee" aria-label="Services"><div class="marquee-track">
+    <span>FIELD MARKETING</span><b>✦</b><span>BRAND ACTIVATION</span><b>✦</b><span>ROADSHOWS</span><b>✦</b><span>PRODUCTION</span><b>✦</b><span>DIGITAL</span><b>✦</b>
+    <span>FIELD MARKETING</span><b>✦</b><span>BRAND ACTIVATION</span><b>✦</b><span>ROADSHOWS</span><b>✦</b><span>PRODUCTION</span><b>✦</b><span>DIGITAL</span><b>✦</b>
+  </div></div>
+
+  <section id="about" class="section about">
+    <div class="section-no reveal">01 / ABOUT US <span>WHO WE ARE</span></div>
+    <div class="about-grid">
+      <div class="reveal"><p class="kicker">Not just marketing.</p><h2>We put <em>people</em><br>at the center.</h2></div>
+      <div class="about-copy reveal">
+        <p class="big">Our company was created with the vision of being the best in marketing.</p>
+        <p>We are a people-to-people marketing agency. We build real connections and turn consumers into loyal customers. Our goal isn’t just to reach people — it’s to touch their lives and make a difference.</p>
+        <div class="scribble">Human connection <span>↗</span></div>
+      </div>
+    </div>
+    <div class="about-image reveal"><img class="image-reveal parallax-img" src="assets/projects/about.webp" alt="Limitless live activation" width="1326" height="884" loading="lazy" decoding="async"><div class="image-caption"><span>LIMITLESS / PEOPLE</span><span>TEAM → EXPERIENCE</span></div></div>
+  </section>
+
+  <section class="statement"><img class="statement-photo parallax-img image-reveal" src="assets/projects/statement.webp" alt="Limitless live activation team" width="1063" height="598" loading="lazy" decoding="async"><div class="statement-overlay"></div><div class="statement-word">PEOPLE</div><div class="statement-content reveal"><small>THE LIMITLESS APPROACH</small><h2>We don't just<br>reach people.<br>We <em>touch</em> lives.</h2><span>02 — 06</span></div></section>
+
+  <section id="services" class="section services">
+    <div class="section-no reveal">02 / WHAT WE DO <span>END-TO-END SOLUTIONS</span></div>
+    <div class="services-intro reveal"><h2>Smart ideas.<br><em>Hands-on</em> execution.</h2><p>Marketing services built around real client needs — from first contact to measurable results.</p></div>
+    <div class="service-list">
+      <article class="service reveal"><span>01</span><div><small>FIELD</small><h3>Field Marketing</h3><p>B2B &amp; B2C</p></div><b>↗</b></article>
+      <article class="service reveal"><span>02</span><div><small>EXPERIENCE</small><h3>Face-to-Face Campaigns</h3><p>Roadshows · POS Promotions · Door-to-Door</p></div><b>↗</b></article>
+      <article class="service reveal"><span>03</span><div><small>CONNECT</small><h3>Database &amp; Digital</h3><p>Email · Call Centers · Database Marketing</p></div><b>↗</b></article>
+      <article class="service reveal"><span>04</span><div><small>MAKE</small><h3>Design &amp; Printing</h3><p>Uniforms · Flyers · Banners · Giveaways</p></div><b>↗</b></article>
+    </div>
+  </section>
+
+  <section class="numbers">
+    <div class="number reveal"><strong data-count="20" data-suffix="+">0+</strong><small>YEARS</small><p>Experience in marketing</p></div>
+    <div class="number reveal"><strong data-count="40" data-suffix="+">0+</strong><small>CLIENTS</small><p>Major clients across industries</p></div>
+    <div class="number reveal"><strong data-count="178">0</strong><small>OUTLETS</small><p>Shell distributor outlets</p></div>
+    <div class="number reveal"><strong>3—100</strong><small>METERS</small><p>Production range</p></div>
+  </section>
+
+  <section id="clients" class="clients section">
+    <div class="section-no reveal">03 / TRUSTED BY <span>PARTNERS &amp; BRANDS</span></div>
+    <div class="client-intro reveal">
+      <p>More than two decades of turning direct communication into brand loyalty.</p>
+      <div class="client-logos"><span>TotalEnergies</span><span>P&amp;G</span><span>Henkel</span><span>Castrol</span><span>Pepsi</span><span>Huawei</span></div>
+      <div class="campaign-links"><small>CAMPAIGN LINKS FROM THE COMPANY PORTFOLIO</small><div><a href="https://www.facebook.com/TotalEnergiesEgypt/videos/454332177018250/" target="_blank" rel="noopener noreferrer">TotalEnergies video 01 ↗</a><a href="https://www.facebook.com/TotalEnergiesEgypt/videos/377907988217751/" target="_blank" rel="noopener noreferrer">TotalEnergies video 02 ↗</a><a href="https://www.facebook.com/TotalEnergiesEgypt/videos/935124774772140/" target="_blank" rel="noopener noreferrer">TotalEnergies video 03 ↗</a></div></div>
+    </div>
+  </section>
+
+  <section class="mission">
+    <div class="mv reveal"><span>MISSION / 01</span><h3>Understand.<br>Solve.<br><em>Connect.</em></h3><p>Develop and deliver marketing services that genuinely meet clients’ real needs — understanding goals, solving challenges and creating meaningful human connections that drive measurable results.</p></div>
+    <div class="mv vision reveal"><span>VISION / 02</span><h3>Human-centric<br>marketing with<br><em>lasting impact.</em></h3><p>Transform marketing into a human-centric experience — one that inspires action, builds trust, and makes a lasting impact on people's lives.</p></div>
+  </section>
+
+  <section id="work" class="section work">
+    <div class="section-no reveal">04 / SELECTED WORK <span>{{ filteredProjects.length }} / {{ projects.length }} PROJECTS</span></div>
+    <div class="work-head reveal"><h2>Work that<br><em>moves.</em></h2><p>Curated from the supplied company portfolio. The gallery now favors clearer, more relevant campaign and event photography over generic, duplicated or weak visuals.</p></div>
+    <div class="filter-row reveal" role="group" aria-label="Filter selected work">
+      <button *ngFor="let filter of filters" type="button" [class.active]="activeFilter===filter" (click)="setFilter(filter)">{{ filter }}</button>
+    </div>
+
+    <div class="project-grid">
+      <button type="button" class="project reveal" *ngFor="let p of filteredProjects" (click)="openProject(p)" [attr.aria-label]="'Open ' + p.title">
+        <span class="project-media">
+          <img [src]="p.image" [alt]="p.title + ' — ' + p.category" width="1280" height="900" loading="lazy" decoding="async">
+          <span class="project-frame"></span>
+          <span class="project-num">{{p.index}}</span>
+          <span class="project-category">{{p.category}}</span>
+          <span class="project-view">↗</span>
+        </span>
+        <span class="project-info">
+          <span class="project-info-top"><small>LIMITLESS / SELECTED WORK</small><small>{{p.index}}</small></span>
+          <span class="project-title-row"><span class="project-title">{{p.title}}</span><span class="project-link">View project <b>↗</b></span></span>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <section id="production" class="production section">
+    <div class="production-copy reveal"><p class="kicker">Production capability</p><h2>From <em>3m</em><br>to <em>100m.</em></h2><p>For Shell, the team established approximately 178 distributor outlets across Egypt. Branding covered shops, oil stands, posters and light boxes, with regular monthly follow-up and maintenance.</p><div class="prod-stat"><strong>178</strong><span>distributor outlets<br>across Egypt</span></div></div>
+    <div class="production-visual reveal"><img class="image-reveal parallax-img" src="assets/projects/production.webp" alt="Limitless production and retail display" width="1800" height="1016" loading="lazy" decoding="async"><div class="corner c1">03M</div><div class="corner c2">100M</div><div class="scan"></div><div class="prod-label">SELECTED / PRODUCTION</div></div>
+  </section>
+
+  <section class="quote"><div class="quote-no">05</div><div class="quote-mark">“</div><blockquote>Marketing's job is never done.<br>It's about <em>perpetual motion.</em></blockquote><p>We must continue to innovate every day.</p></section>
+
+  <section id="contact" class="contact section">
+    <div class="contact-no">06 / CONTACT</div>
+    <div class="contact-title reveal"><p class="kicker">Ready when you are.</p><h2>Let's make<br>something <em>move.</em></h2></div>
+    <div class="contact-grid reveal">
+      <div><small>VISIT</small><p>190 Emtedad Ramses Street,<br>Nasr City, Cairo</p></div>
+      <div><small>CALL / EMAIL</small><p><a href="tel:+201003107222">010-031-07222</a><br><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Aymanpm99%40gmail.com" target="_blank" rel="noopener noreferrer">Aymanpm99@gmail.com</a></p></div>
+      <a class="contact-button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Aymanpm99%40gmail.com&amp;su=Limitless%20Project%20Inquiry&amp;body=Hello%20Limitless%20Marketing%20Services%2C%0A%0AI%27d%20like%20to%20discuss%20a%20new%20project.%0A%0AProject%20details%3A%0A%0ABest%20regards%2C" target="_blank" rel="noopener noreferrer">Start a project <span>↗</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-topline"><span>LIMITLESS / MARKETING SERVICES</span><span>CAIRO / EGYPT</span></div>
+  <div class="footer-main">
+    <div class="footer-brand"><span class="footer-mark"><img src="assets/limitless-logo-clean.webp" alt="Limitless Marketing Services" class="footer-logo" width="603" height="608" loading="lazy" decoding="async"></span><div><strong>Limitless</strong><span>Marketing Services</span></div></div>
+    <div class="footer-links-wrap">
+      <small>NAVIGATE</small>
+      <nav class="footer-links" aria-label="Footer navigation"><a href="#home" (click)="navigate($event, 'home')">Home</a><a href="#about" (click)="navigate($event, 'about')">About</a><a href="#services" (click)="navigate($event, 'services')">Services</a><a href="#clients" (click)="navigate($event, 'clients')">Clients</a><a href="#work" (click)="navigate($event, 'work')">Work</a><a href="#production" (click)="navigate($event, 'production')">Production</a><a href="#contact" (click)="navigate($event, 'contact')">Contact</a></nav>
+    </div>
+    <div class="footer-message">
+      <small>THE FUTURE IS</small>
+      <strong>LIMITLESS<span>.</span></strong>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>Human connection · Experience · Results</span><span>© 2026 Limitless Marketing Services</span><a href="#home" (click)="navigate($event, 'home')">Back to top ↗</a></div>
+</footer>
+
+<button type="button" class="back-top" [class.show]="scrollProgress > 15" (click)="scrollToTop()" aria-label="Back to top">↑</button>
+
+<div class="lightbox" *ngIf="selectedProject" role="dialog" aria-modal="true" [attr.aria-label]="selectedProject.title" (click)="closeProject()">
+  <button type="button" class="close" aria-label="Close project" (click)="closeProject()">×</button>
+  <button type="button" class="lb-prev" aria-label="Previous project" (click)="$event.stopPropagation();prevProject()">←</button>
+  <button type="button" class="lb-next" aria-label="Next project" (click)="$event.stopPropagation();nextProject()">→</button>
+  <div class="lightbox-inner" (click)="$event.stopPropagation()">
+    <div class="lightbox-image"><img [src]="selectedProject.image" [alt]="selectedProject.title" width="1280" height="900"></div>
+    <div class="lightbox-meta"><span>{{selectedProject.index}} / {{projects.length}}</span><small>{{selectedProject.category}}</small><h2>{{selectedProject.title}}</h2><p>Selected work from Limitless Marketing Services.</p><div class="lightbox-hint">Use ← → or swipe on touch devices</div></div>
+  </div>
+</div>

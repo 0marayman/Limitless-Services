@@ -1,0 +1,29 @@
+{
+  "name": "limitless-marketing-portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "22.1.7",
+    "@angular/compiler": "22.1.7",
+    "@angular/core": "22.1.7",
+    "@angular/platform-browser": "22.1.7",
+    "rxjs": "7.4.0",
+    "tslib": "^2.3.0",
+    "zone.js": "0.16.3",
+    "gsap": "3.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "22.1.7",
+    "@angular/cli": "22.1.7",
+    "@angular/compiler-cli": "22.1.7",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=22.22.3"
+  }
+}
